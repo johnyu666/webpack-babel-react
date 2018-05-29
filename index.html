@@ -5,7 +5,31 @@
 	<title>Document</title>
 </head>
 <body>
+	<button>hello</button><button>hello</button>
 	<div id="root"></div>
+	<script>
+		document.querySelector("button").addEventListener("click",(e)=>{
+
+			var book={id:23,bname:"harry"};
+
+		    let header=new Headers();
+		    header.append("Content-Type","application/json");
+
+		    let options={
+		        method:"POST",
+				headers:header,
+				body:JSON.stringify(book)
+		    };
+
+		    window.fetch("http://localhost:8080/books",options)
+				.then((resp)=>{
+					return resp.json();
+				})
+				.then((books)=>{
+				   console.log(books);
+				});
+		})
+	</script>
 	<script type="text/javascript" src="dist/bundle.js"></script>	
 </body>
 </html>

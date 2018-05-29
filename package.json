@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"webpack-dev-server --open",
-    "build":"webpack",
-    "watch":"webpack --watch"
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.3.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   },
